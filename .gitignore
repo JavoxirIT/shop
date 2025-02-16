@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/src/config/crypto.ts
+/src/request/key.ts
 /.pnp
 .pnp.*
 .yarn/*
