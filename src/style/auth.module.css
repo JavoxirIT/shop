@@ -17,22 +17,13 @@
 }
 .floating_text {
     position: absolute;
-    font-size: 70px;
+    font-size: 150px;
     font-weight: 900;
     font-family: var(--font-chewy);
     opacity: 0.1;
     white-space: nowrap;
     pointer-events: none;
     transform: rotate(-45deg);
-}
-.auth_header {
-    padding: 20px;
-    background-color: var(--colorBlackGray, #242424);
-    color: var(--colorWhite);
-}
-.auth_header > div > h1 {
-    font-size: var(--fontsize32);
-    font-weight: var(--fontWeight700);
 }
 
 .auth_container {

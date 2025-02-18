@@ -5,6 +5,7 @@ import style from '@/style/auth.module.css';
 import * as Yup from 'yup';
 import { Field, Form, Formik } from 'formik';
 import encrypt from 'config/crypto';
+import Header from '@/components/organisms/header';
 
 const SignupSchema = Yup.object().shape({
     password: Yup.string()
@@ -16,12 +17,11 @@ const SignupSchema = Yup.object().shape({
         .required('Email address is required!'),
 });
 
-const SALE_COUNT = 50;
+const SALE_COUNT = 5;
 
 export default function Page() {
     const secret = encrypt('salon', 'qalay');
 
- 
     console.log(secret);
     const animationRefs = useRef<(number | null)[]>(
         new Array(SALE_COUNT).fill(null)
@@ -39,6 +39,7 @@ export default function Page() {
 
         const wrapperWidth = wrapper.clientWidth;
         const wrapperHeight = wrapper.clientHeight;
+        const animationRefsCurrent = animationRefs.current;
 
         saleElements.forEach((textElement, index) => {
             if (!(textElement instanceof HTMLElement)) return;
@@ -69,7 +70,7 @@ export default function Page() {
         });
 
         return () => {
-            animationRefs.current.forEach(ref => {
+            animationRefsCurrent.forEach(ref => {
                 if (ref) cancelAnimationFrame(ref);
             });
         };
@@ -82,11 +83,7 @@ export default function Page() {
                     SALE
                 </div>
             ))}
-            <header className={style.auth_header}>
-                <div className={style.auth_container}>
-                    <h1>SALE</h1>
-                </div>
-            </header>
+            <Header />
             <div className={style.auth_form_wrapper}>
                 <div className={style.auth_container}>
                     <div className={style.auth_form_container}>

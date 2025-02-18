@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-import { Chewy, Geist, Geist_Mono } from 'next/font/google';
+import { Chewy, Geist, Geist_Mono, Montserrat } from 'next/font/google';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 import '@/style/globals.css';
 
 const geistSans = Geist({
@@ -13,6 +16,10 @@ const chewySans = Chewy({
 
 const geistMono = Geist_Mono({
     variable: '--font-geist-mono',
+    subsets: ['latin'],
+});
+const montserrat = Montserrat({
+    variable: '--font-montserrat',
     subsets: ['latin'],
 });
 
@@ -29,7 +36,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${chewySans.variable}`}>
+                className={`${geistSans.variable} ${geistMono.variable} ${chewySans.variable} ${montserrat.variable}`}>
                 {children}
             </body>
         </html>
