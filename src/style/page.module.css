@@ -3,6 +3,20 @@
     flex-direction: column;
     height: 100vh;
 }
-.home__block {
+.home__block__grid {
     flex: 1;
+    display: grid;
+    grid-template: 1fr 1fr / calc(100vw - 30%) 30%;
+}
+.grid__item__one {
+    grid-area: 1/1/3/2;
+    background-color: var(--color7);
+}
+.grid__item__ {
+    grid-area: 1/2/2/3;
+    background-color: var(--color6);
+}
+.grid__item__three {
+    grid-area: 2/2/3/3;
+    background-color: var(--color6);
 }

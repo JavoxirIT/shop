@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import style from '../components_style/swiper.module.css';
+import style from '@/style/components_style/swiper.module.css';
 import { SliderButtons } from '../atoms/swiper_buttoms';
 
 interface Slide {
@@ -39,7 +39,8 @@ export default function HomeSwiper({ data }: HomeSwiperProps) {
                 <SwiperSlide key={id}>
                     <div
                         style={{
-                            background: `url(${image}) center center / cover scroll no-repeat`,
+                            // background: `url(${image}) center center / cover scroll no-repeat`,
+                            // backgroundColor: 'black',
                             height: '100%',
                         }}>
                         <div className={style.element1}></div>

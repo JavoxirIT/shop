@@ -106,7 +106,7 @@ h6 {
     --color9: #22577a;
 }
 .container {
-    max-width: 1400px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -133,10 +133,10 @@ h6 {
     color: var(--color5) !important;
 }
 .swiper-button-next {
-    right: 150px !important;
+    right: 50px !important;
 }
 .swiper-button-prev {
-    left: 150px !important;
+    left: 50px !important;
 }
 .swiper-pagination-bullet,
 .swiper-pagination-bullet.swiper-pagination-bullet-active {

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Chewy, Geist, Geist_Mono, Montserrat } from 'next/font/google';
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import '@/style/globals.css';
+import loader from './loadet';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -35,8 +36,17 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
+            <head>
+                <style dangerouslySetInnerHTML={{ __html: loader }} />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${chewySans.variable} ${montserrat.variable}`}>
+                <div className='loading-wave'>
+                    <div className='loading-bar'></div>
+                    <div className='loading-bar'></div>
+                    <div className='loading-bar'></div>
+                    <div className='loading-bar'></div>
+                </div>
                 {children}
             </body>
         </html>

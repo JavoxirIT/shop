@@ -1,0 +1,29 @@
+.header {
+    --padding20-0: 10px 0;
+    background-color: var(--colorWhite);
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+}
+.header__block {
+}
+.header__block__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding20-0);
+    border-bottom: 0.01px solid var(--color9);
+}
+
+.header__logo {
+    background-color: var(--color9);
+    padding: 10px 20px;
+    font-size: 32px;
+    border-radius: 10px;
+}
+.header__logo > a {
+    color: var(--color-white);
+}
+
+.header__block__last {
+    padding: var(--padding20-0);
+}
